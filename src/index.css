@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-primary: #DD6C34;
+  --color-brand-secondary: #C34B10;
+  
+  --color-bg-primary: #09090F;
+  --color-bg-secondary: #15151B;
+  
+  --color-text-primary: #FFFFFF;
+  --color-text-muted: #B0B0B8;
+  
+  --radius-card: 12px;
+  --radius-button: 5px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-primary text-text-primary font-sans antialiased;
+  }
+}
+
+.gradient-accent {
+  background: linear-gradient(90deg, #DD6C34, #C34B10);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #DD6C34, #C34B10);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  @apply font-bold;
+}
+
+.card-premium {
+  @apply bg-bg-secondary border border-white/5 rounded-card p-6;
+}
+
+.btn-primary {
+  background: linear-gradient(95deg, #18EB63 1.35%, #43FCA0 100%);
+  @apply text-[#191919] font-normal text-[18px] leading-[1.2] py-4 px-8 rounded-button shadow-[0_0_20px_-5px_rgba(24,235,99,0.3)] transition-all hover:scale-105 active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-bg-secondary border border-white/10 text-white font-semibold py-4 px-8 rounded-button transition-all hover:bg-white/5;
+}
+
+.glow-orange {
+  @apply relative overflow-hidden;
+}
+
+.glow-orange-spot {
+  @apply absolute -z-10 blur-[100px] opacity-20 bg-brand-primary rounded-full;
+  width: 400px;
+  height: 400px;
+}
+
+.divider {
+  @apply h-px w-full bg-white/8 my-12;
+}
